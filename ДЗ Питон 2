@@ -1,0 +1,184 @@
+#задача 1
+#Дано число num(значение задаете сами). Напечатать “num>0”, если число больше 0, иначе - “num<0”
+num = int(input('Введите число '))
+if num > 0:
+    print('num>0')
+else: print('num<0')
+#задача 2
+#Дано число. Напечатать, если число делится на 3, “ok”, в противном случае - ‘:(’
+x = int(input('Введите число '))
+if x % 3 == 0:
+    print('OK')
+else: print(":(")
+#задача 3
+#пользователь вводит номер месяца (от 1 до 12),
+#определить существует ли такой месяц (в печати указать “да” или “нет”)
+x = int(input('Введите номер месяца '))
+if x >= 1 and x <= 12:
+    print('Да')
+else: print('Нет')
+
+#Усложненные задачи
+
+#Задача
+#Пользователь вводит желаемую фигуру (“круг”, “квадрат”, “прямоугольник”, “треугольник”)
+#Нарисовать данную фигуру при помощи модуля turtle
+from turtle import *
+f=350
+figura = input('Какую фигуру нарисовать? ')
+if figura == "круг":
+    shape('turtle')
+    pensize(5)
+    color('red')
+    circle(150)
+    left(90)
+    pensize(0)
+    color('white')
+    forward(150)
+    color('red')
+    left(2000)
+elif figura == "квадрат":
+    shape('turtle')
+    pensize(5)
+    color('blue')
+    forward(f / 2)
+    left(90)
+    forward(f)
+    left(90)
+    forward(f)
+    left(90)
+    forward(f)
+    left(90)
+    forward(f / 2)
+    left(90)
+    pensize(0)
+    color('white')
+    forward(f / 2)
+    color('blue')
+    left(2000)
+elif figura == "прямоугольник":
+    shape('turtle')
+    pensize(5)
+    color('green')
+    forward(f / 2 + 40)
+    left(90)
+    forward(f)
+    left(90)
+    forward(f + 80)
+    left(90)
+    forward(f)
+    left(90)
+    forward(f / 2 + 40)
+    left(90)
+    pensize(0)
+    color('white')
+    forward(f / 2)
+    color('green')
+    left(2000)
+elif figura == "треугольник":
+    shape('turtle')
+    pensize(5)
+    color('orange')
+    forward(f / 2)
+    left(120)
+    forward(f)
+    left(120)
+    forward(f)
+    left(120)
+    forward(f / 2)
+    left(90)
+    pensize(0)
+    color('white')
+    forward(120)
+    color('orange')
+    left(2000)
+else: print('Неправильная фигура')
+
+#Задача
+#Пользователь выбирает хочет ли он закрасить круг или нет. В зависимости от выбора пользователя нарисовать при помощи модуля turtle закрашенный круг или полый круг
+from turtle import *
+x = input('Вы хотите закрасить круг? ')
+if x == 'да':
+    shape('turtle')
+    pensize(5)
+    color('pink')
+    begin_fill()
+    fillcolor("pink")
+    circle(150)
+    end_fill()
+    import time
+    time.sleep(5)
+elif x == 'нет':
+    shape('turtle')
+    pensize(5)
+    color('pink')
+    fillcolor("pink")
+    circle(150)
+    import time
+    time.sleep(5)
+else: print('Ответ должен быть в формате "да" или "нет"')
+
+#задача 1
+#Вывести на экран число(может быть любым), если последняя цифра числа равна 8
+x = input(str('Введите любое число '))
+if x.isdigit():
+    print(f'Последняя цифра равна {list(x)[-1]}')
+else: print('Вы уверены, что это число?')
+
+#задача 2
+#вывести кол-во дней в зависимости от года. Год определяет пользователь
+year = int(input('Введите год '))
+import calendar
+def is_leap(year):
+    return calendar.isleap(year)
+def days_in_year(year):
+    return 366 if is_leap(year) else 365
+print(f'В этом году {days_in_year(year)} дней')
+
+#задача 3
+#Запросить координаты точки (x, y) и определить номер четверти, в которую попала эта точка. Необходимо учесть случаи попадания точки на оси X или Y или в начало координат.
+x = int(input('Введите координату x '))
+y = int(input('Введите координату y '))
+if x > 0 and y > 0:
+    print('Точка находится в четверти I')
+elif x > 0 and y < 0:
+    print('Точка находится в четверти IV')
+elif x < 0 and y > 0:
+    print('Точка находится в четверти II')
+elif x < 0 and y < 0:
+    print('Точка находится в четверти III')
+elif x == 0 and y == 0:
+    print('Точка находится в центре')
+elif y == 0:
+    print('Точка лежит на оси ординат')
+elif x == 0:
+    print('Точка лежит на оси абсцисс')
+else: print('Точка больше нигде не лежит')
+
+#Задача 4
+#Дан день, месяц и год (может быть любым, даже отрицательным)
+#Определить существует ли дата?
+import datetime
+year = input('Введите год ')
+month = input('Введите месяц ')
+day  = input('Введите день ')
+isValidDate = True
+try:
+    datetime.datetime(int(year), int(month), int(day))
+except ValueError:
+    isValidDate = False
+if(isValidDate):
+    print('Дата существует')
+else: print('Такой даты не существует')
+
+#задача 5
+#Дано число, которое состоит из 4 цифр(цельное). создать новое число из этих же цифр, но расположенных в порядке увеличения
+#пример
+#вход: 2341
+#выход : 1234
+x = str(input('Введите четырёхзначное число '))
+if int(x) // 10000 == 0 and int(x) // 1000 > 0:
+    y = list(sorted(x))
+    z = ''.join(y)
+    print(f'Новое число: {z}')
+else: print('Это число не четырёхзначное')
