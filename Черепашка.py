@@ -1,5 +1,6 @@
 import turtle
 x = int(input('Введите число '))
+len = len(str(x))
 from turtle import *
 q = ('red', 'magenta', 'MediumOrchid', 'BlueViolet', 'blue', 'DodgerBlue', 'DarkTurquoise', 'lime green', 'GreenYellow', 'yellow', 'Gold', 'DarkOrange')
 shape('turtle')
@@ -43,7 +44,7 @@ try:
                 write("Game over", font=FONT)
                 exitonclick()
                 print("Game over")
-                print(f"Your score is {score}")
+                print(f"Your score is {score - len}")
             else:
                 pencolor(i)
                 if x % 2 == 1:
