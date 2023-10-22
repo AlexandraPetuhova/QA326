@@ -1,5 +1,5 @@
-# задача
-# Найдите количество различных элементов данного массива.
+# # задача
+# # Найдите количество различных элементов данного массива.
 
 massiv = []
 element = input("Введите элемент массива ")
@@ -40,12 +40,14 @@ print(f"Количество различных элементов данног�
 from random import randint
 massiv = list(randint(-100, 100) for i in range(0, randint(1, 20)))
 print(massiv)
+# massiv = [1, 1, 4, 4, 2, 2, 2, 3, 3, 3]
 count = 1
 commons = set()
 for element in massiv:
     if massiv.count(element) > count:
         count = massiv.count(element)
         common = element
+        commons.clear()
     elif massiv.count(element) == count and massiv.count(element) != 1 and element != common:
         commons.add(element)
         commons.add(common)
@@ -203,4 +205,3 @@ for index, list_ in enumerate(massiv):
         else:
             print(symbol, end=' ')
     print('')
-
