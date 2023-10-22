@@ -226,3 +226,35 @@ for i in range(1, lenght * 2 + 1, 2):
     print((symbol * i).center(lenght * 2, ' '))
 for i in range((lenght - 1) * 2 - 1, 0, -2):
     print((symbol * (i)).center(lenght * 2 - 1, ' '))
+
+
+
+# задача
+# напечатать полый ромб (заданы длина, ширина и символ) при помощи цикла for
+
+while True:
+    try:
+        lenght = int(input("Введите длину и ширину (одной цифрой, это же ромб) "))
+        if lenght <= 0:
+            print("Число не может быть меньше 0. Попробуйте ещё раз")
+        else:
+            break
+    except ValueError:
+        print("Неверное значение. Попробуйте ещё раз")
+symbol = input("Введите символ ")
+for i in range(1, lenght * 2 + 1, 2):
+    line = ' ' * (i - 2)
+    if i != 1:
+        line = symbol + line + symbol
+    else:
+        line = symbol
+    print(line.center(lenght * 2, ' '))
+for i in range((lenght - 1) * 2 - 1, 0, -2):
+    line = ' ' * (i - 2)
+    if i != 1:
+        line = symbol + line + symbol
+    else:
+        line = symbol
+    print(line.center(lenght * 2, ' '))
+
+
