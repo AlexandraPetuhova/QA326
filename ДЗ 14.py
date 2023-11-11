@@ -76,31 +76,33 @@ def list_to_int(something):
         smt2.append(int(element))
     return smt2
 
-sides = input("Введите стороны многоугольника через пробел ")
-sides = sides.split()
-sides = list_to_int(sides)
-if if_exist(sides):
-    match len(sides):
-        case 3:
-            word = "тре"
-        case 4:
-            word = "четырёх"
-        case 5:
-            word = "пяти"
-        case 6:
-            word = "шести"
-        case 7:
-            word = "семи"
-        case 8:
-            word = "восьми"
-        case 9:
-            word = "девяти"
-        case _:
-            word = "много"
-    print(f"Периметр {word}угольника равен {sum(sides)}")
-else:
-    print("Периметр не найден")
+def count_perimeter(figure):
+    figure = figure.split()
+    figure = list_to_int(figure)
+    if if_exist(figure):
+        match len(figure):
+            case 3:
+                word = "тре"
+            case 4:
+                word = "четырёх"
+            case 5:
+                word = "пяти"
+            case 6:
+                word = "шести"
+            case 7:
+                word = "семи"
+            case 8:
+                word = "восьми"
+            case 9:
+                word = "девяти"
+            case _:
+                word = "много"
+        print(f"Периметр {word}угольника равен {sum(figure)}")
+    else:
+        print("Периметр не найден")
 
+figure = input("Введите стороны многоугольника через пробел ")
+count_perimeter(figure)
 # задача
 # написать функцию для фигуры как на картинке.
 # и решить задачу с применением этой функции
