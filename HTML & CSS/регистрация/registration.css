@@ -1,0 +1,56 @@
+body {
+  background: Gainsboro;
+}
+
+div {
+  border-radius: 15px;
+  margin: auto;
+  max-width: 20%;
+  background: linear-gradient(
+    135deg,
+    rgb(245, 245, 245),
+    white 10%,
+    rgb(245, 245, 245)
+  );
+  padding: 10px 20px;
+  box-shadow: 3px 10px 30px Grey;
+}
+h1 {
+  color: rgb(55, 55, 55);
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 150%;
+  text-transform: uppercase;
+  font-family: franklin gothic medium;
+  letter-spacing: 4px;
+}
+form,
+label {
+  display: flex;
+  padding: 5px;
+  font-family: corbel;
+  position: relative;
+}
+
+input,
+select {
+  width: 1000px;
+  height: 25px;
+  background: linear-gradient(
+    rgb(245, 245, 245),
+    white 10%,
+    rgb(245, 245, 245)
+  );
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-right: 7px;
+  border-color: rgb(150, 150, 150);
+  border-width: 1px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  top: -5px;
+  opacity: 50%;
+  width: 14px;
+}

@@ -1,0 +1,40 @@
+h1 {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(blue, 10%, pink);
+  font-family: segoe ui;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #d2ead7;
+}
+div {
+  background: linear-gradient(pink, white);
+  padding: 20px;
+}
+div li {
+  font-family: corbel;
+  padding: 5px;
+
+  margin: 0px -4px 0px 0px;
+  font-size: 120%;
+  display: inline-block;
+}
+li.active {
+  background: linear-gradient(white, 15%, RosyBrown, 97%, Indigo);
+  font-weight: bold;
+  border-radius: 5px;
+}
+li.active a {
+  color: black;
+}
+
+ol > li {
+  color: purple;
+  font-weight: bold;
+  font-family: century;
+  text-transform: uppercase;
+  margin: 10px;
+}
+ul > li {
+  font-family: corbel;
+}

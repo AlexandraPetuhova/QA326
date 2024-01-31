@@ -1,0 +1,94 @@
+h1 {
+  color: rgb(55, 55, 55);
+  font-size: 150%;
+  text-transform: uppercase;
+  font-family: franklin gothic medium;
+  letter-spacing: 4px;
+  text-align: center;
+}
+h3,
+label {
+  font-family: calibri;
+  font-size: 120%;
+  font-weight: 600;
+}
+
+div {
+  margin: 10px auto;
+  max-width: 70%;
+  border-radius: 8px;
+  padding: 10px;
+}
+div:nth-of-type(even) {
+  background: PeachPuff;
+}
+div:nth-of-type(odd) {
+  background: LightPink;
+}
+.unwanted:hover {
+  position: relative;
+  top: -10px;
+  right: -80px;
+}
+
+input,
+select {
+  width: 200px;
+  height: 25px;
+  background: linear-gradient(
+    rgb(245, 245, 245),
+    white 10%,
+    rgb(245, 245, 245)
+  );
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-right: 7px;
+  border-color: rgb(150, 150, 150);
+  border-width: 1px;
+}
+input[type="checkbox"]:not(.hser),
+input[type="radio"] {
+  position: relative;
+  top: 7px;
+  opacity: 50%;
+  width: 14px;
+}
+img {
+  width: 350px;
+}
+
+.hser {
+  height: 34px;
+  width: 34px;
+  position: relative;
+  top: -30px;
+  border-width: 6px;
+  border-color: black;
+  left: -344px;
+}
+
+textarea {
+  width: 400px;
+  min-height: 50px;
+  background: linear-gradient(
+    rgb(245, 245, 245),
+    white 10%,
+    rgb(245, 245, 245)
+  );
+  border-radius: 5px;
+  padding: 10px;
+}
+button {
+  border: 1px solid rgba(27, 31, 35, 0.55);
+  border-radius: 5px;
+  font-size: 100%;
+  padding: 8px 20px;
+}
+input[type="file"] {
+  width: 300px;
+  padding: 0;
+  font-size: 103%;
+}
+span {
+  display: grid;
+}

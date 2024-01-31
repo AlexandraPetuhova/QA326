@@ -1,0 +1,22 @@
+h1 {
+  padding: 10px;
+  margin: 0;
+  background: #545059;
+  color: white;
+  font-family: tahoma;
+}
+p {
+  padding: 5px;
+  margin: 0px 0px 3px 0px;
+  background: #ff69b4;
+  font-family: arial;
+  font-size: 150%;
+}
+img {
+  max-width: 9%;
+  max-height: 9%;
+}
+img:hover {
+  max-width: 15%;
+  max-height: 15%;
+}
