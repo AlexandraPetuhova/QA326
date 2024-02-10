@@ -40,7 +40,7 @@ def test_date_invalid_boundary_values(value):
     assert response.status_code == 400
     assert response.json()['msg'] == 'Date must be between Jun 16, 1995 and Feb 10, 2024.'
 
-# Проверка, что отсутствие API KEY вызывает ошибку и код ответа 400 и больше
+# Проверка, что неправильный API KEY вызывает ошибку и код ответа 400 и больше
 def test_invalid_apikey():
     apikey = "kukaracha"
     url = f"{base_url}?api_key={apikey}&date={date}"
@@ -48,7 +48,7 @@ def test_invalid_apikey():
     assert response.status_code > 400
     assert response.json()['error']['code'] == 'API_KEY_INVALID'
 
-# Проверка, что неправильный API KEY вызывает ошибку и код ответа 400 и больше
+# Проверка, что отсутствие API KEY вызывает ошибку и код ответа 400 и больше
 def test_no_apikey():
     apikey = ""
     url = f"{base_url}?api_key={apikey}&date={date}"
