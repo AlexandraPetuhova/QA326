@@ -41,11 +41,11 @@ def test_search_more_than_50(driver):
     searchbox.send_keys(input_value)
     searchbox.send_keys(Keys.ENTER)
     try:
-        s = driver.find_element(By.CLASS_NAME, 'i-catalog__sort')
+        search_succesfull = driver.find_element(By.CLASS_NAME, 'i-catalog__sort')
     except NoSuchElementException:
         response = requests.get('https://www.rightbag.ru/searchSmart/?query=' + input_value)
         print(f" Код ответа сервера: {response.status_code}")
-    assert s
+    assert search_succesfull
     searched_text = driver.find_element(By.CLASS_NAME, "b-catalog__head")
     found_items_count = driver.find_element(By.CLASS_NAME, "i-catalog__products_count")
     searched_text = searched_text.text[:len(searched_text.text) - (len(found_items_count.text))]
@@ -58,11 +58,11 @@ def test_search_more_than_5000(driver):
     searchbox.send_keys(input_value)
     searchbox.send_keys(Keys.ENTER)
     try:
-        s = driver.find_element(By.CLASS_NAME, 'i-catalog__sort')
+        search_succesfull = driver.find_element(By.CLASS_NAME, 'i-catalog__sort')
     except NoSuchElementException:
         response = requests.get('https://www.rightbag.ru/searchSmart/?query=' + input_value)
         print(f" Код ответа сервера: {response.status_code}")
-    assert s
+    assert search_succesfull
     searched_text = driver.find_element(By.CLASS_NAME, "b-catalog__head")
     found_items_count = driver.find_element(By.CLASS_NAME, "i-catalog__products_count")
     searched_text = searched_text.text[:len(searched_text.text) - (len(found_items_count.text))]
