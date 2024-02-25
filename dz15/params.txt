@@ -1,0 +1,79 @@
+{"Gender":  "",
+"First name": "",
+"Last name": "",
+"Email": "",
+"Password": "",
+"Confirm Password": "",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "io@ro.com",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "valid"};
+
+{"Gender":  "",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "io@ro.com",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "valid"};
+
+{"Gender":  "m",
+"First name": "",
+"Last name": "Robertovich",
+"Email": "io@ro.com",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "",
+"Email": "io@ro.com",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "iosif",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "existing_email@mail.com",
+"Password": "123456",
+"Confirm Password": "123456",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "io@ro.com",
+"Password": "",
+"Confirm Password": "",
+"expected_result": "invalid"};
+
+{"Gender":  "m",
+"First name": "Iosif",
+"Last name": "Robertovich",
+"Email": "io@ro.com",
+"Password": "123456",
+"Confirm Password": "654321",
+"expected_result": "invalid"}
